@@ -1,0 +1,79 @@
+def libraryVersions = [
+
+        androidGradlePlugin        : '7.0.4',
+        kotlinGradlePlugin         : '1.5.31',
+        coreKtx                    : '1.7.0',
+
+        material                   : '1.5.0',
+        constraintLayout           : '2.1.3',
+
+        ktxActivity                : '1.2.3',
+        ktxFragment                : '1.3.3',
+
+        lifecycle                  : '2.5.0-beta01',
+
+        hilt                       : '2.38.1',
+        hiltCompiler               : '1.0.0',
+        hiltViewModel              : '1.0.0-alpha03',
+
+        navigation                 : '2.4.2',
+
+        gson                       : '2.9.0',
+
+        retrofit                   : '2.9.0',
+        retrofitCallAdapter        : '2.5.0',
+
+        coroutines                 : '1.3.9',
+
+        chuck                      : '1.1.0',
+
+        room                       : '2.4.0',
+]
+
+ext {
+    globalDependencies = [
+
+            layerApp                : project(":app"),
+            layerData               : project(":data"),
+            layerDomain             : project(":domain"),
+
+            androidGradlePlugin     : "com.android.tools.build:gradle:${libraryVersions.androidGradlePlugin}",
+            kotlinGradlePlugin      : "org.jetbrains.kotlin:kotlin-gradle-plugin:${libraryVersions.kotlinGradlePlugin}",
+            navigationSafeArgsPlugin: "androidx.navigation:navigation-safe-args-gradle-plugin:${libraryVersions.navigation}",
+            coreKtx                 : "androidx.core:core-ktx:${libraryVersions.coreKtx}",
+            
+            hiltGradlePlugin        : "com.google.dagger:hilt-android-gradle-plugin:${libraryVersions.hilt}",
+            hiltAndroid             : "com.google.dagger:hilt-android:${libraryVersions.hilt}",
+            hiltAndroidCompilerKapt : "com.google.dagger:hilt-compiler:${libraryVersions.hilt}",
+            daggerHiltComplier      : "androidx.hilt:hilt-compiler:${libraryVersions.hiltCompiler}",
+
+            coroutines              : "org.jetbrains.kotlinx:kotlinx-coroutines-android:${libraryVersions.coroutines}",
+
+            retrofit                : "com.squareup.retrofit2:retrofit:${libraryVersions.retrofit}",
+            retrofitConverterGson   : "com.squareup.retrofit2:converter-gson:${libraryVersions.retrofit}",
+            retrofitCallAdapter     : "com.squareup.retrofit2:adapter-rxjava2:${libraryVersions.retrofitCallAdapter}",
+
+            gson                    : "com.google.code.gson:gson:${libraryVersions.gson}",
+
+            room                    : "androidx.room:room-ktx:${libraryVersions.room}",
+            roomKapt                : "androidx.room:room-compiler:${libraryVersions.room}",
+
+    ]
+
+    appDependencies = [
+
+            material                   : "com.google.android.material:material:${libraryVersions.material}",
+            constraintLayout           : "androidx.constraintlayout:constraintlayout:${libraryVersions.constraintLayout}",
+
+            activityKtx                : "androidx.activity:activity-ktx:${libraryVersions.ktxActivity}",
+            fragmentKtx                : "androidx.fragment:fragment-ktx:${libraryVersions.ktxFragment}",
+
+            lifecycleViewmodelKtx      : "androidx.lifecycle:lifecycle-viewmodel-ktx:${libraryVersions.lifecycle}",
+            lifecycleJava8             : "androidx.lifecycle:lifecycle-common-java8:${libraryVersions.lifecycle}",
+
+            navigationFragmentKtx      : "androidx.navigation:navigation-fragment-ktx:${libraryVersions.navigation}",
+            navigationUiKtx            : "androidx.navigation:navigation-fragment-ktx:${libraryVersions.navigation}",
+
+            chuck                      : "com.readystatesoftware.chuck:library:${libraryVersions.chuck}"
+    ]
+}

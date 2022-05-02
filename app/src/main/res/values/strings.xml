@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- Common -->
+    <string name="app_name">CryptoMaster</string>
+
+    <string name="close">Close</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="submit">Submit</string>
+
+    <string name="hint_password">******</string>
+    <string name="hint_email">example@gmail.com</string>
+    <string name="or">or</string>
+    <string name="base_code">Base code</string>
+    <string name="sort_by">Sort by</string>
+    <string name="buttonlike">ButtonLike</string>
+
+    <string-array name="sort_types">
+        <item>A-Z</item>
+        <item>Z-A</item>
+        <item>Value (lowes)</item>
+        <item>Value (highest)</item>
+    </string-array>
+
+</resources>

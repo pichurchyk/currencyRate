@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.pichurchyk.softCorp.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            app:popUpTo="@id/main_nav_graph"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_splashFragment_to_wrapperFragment"
+            app:destination="@id/wrapperFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wrapperFragment"
+        android:name="com.pichurchyk.softCorp.ui.mainScreen.wrapper.WrapperFragment"
+        android:label="fragment_wrapper"
+        tools:layout="@layout/fragment_wrapper" />
+</navigation>

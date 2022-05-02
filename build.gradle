@@ -1,0 +1,20 @@
+buildscript {
+
+    apply from: 'dependencies.gradle'
+    apply from: 'config.gradle'
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath globalDependencies.androidGradlePlugin
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21"
+
+        classpath globalDependencies.hiltGradlePlugin
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

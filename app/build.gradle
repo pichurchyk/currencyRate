@@ -1,0 +1,80 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'com.google.secrets_gradle_plugin' version '0.4'
+}
+
+android {
+    compileSdk globalConfig.compileSdkVersion
+
+    defaultConfig {
+        applicationId globalConfig.applicationId
+        minSdk globalConfig.minSdkVersion
+        targetSdk globalConfig.targetSdkVersion
+        versionCode globalConfig.versionCode
+        versionName globalConfig.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation globalDependencies.layerData
+    implementation globalDependencies.layerDomain
+
+//    Common
+    implementation globalDependencies.coreKtx
+    implementation appDependencies.material
+    implementation appDependencies.constraintLayout
+    implementation appDependencies.fragmentKtx
+    implementation appDependencies.activityKtx
+    implementation appDependencies.lifecycleViewmodelKtx
+    implementation appDependencies.lifecycleJava8
+
+//    Hilt
+    implementation globalDependencies.hiltAndroid
+    kapt globalDependencies.hiltAndroidCompilerKapt
+    kapt globalDependencies.daggerHiltComplier
+
+//    Navigation Components
+    implementation appDependencies.navigationFragmentKtx
+    implementation appDependencies.navigationUiKtx
+
+//    GSON
+    implementation globalDependencies.gson
+
+//    Retrofit
+    implementation globalDependencies.retrofit
+    implementation globalDependencies.retrofitConverterGson
+    implementation  globalDependencies.retrofitCallAdapter
+
+//    Coroutines
+    implementation globalDependencies.coroutines
+
+//   Chuck
+    implementation appDependencies.chuck
+
+//    Room
+    implementation globalDependencies.room
+    kapt globalDependencies.roomKapt
+}

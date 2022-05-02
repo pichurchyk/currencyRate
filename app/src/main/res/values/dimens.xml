@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--  Common  -->
+    <dimen name="button_radius">8dp</dimen>
+    <dimen name="common_button_textSize">@dimen/textSize_m</dimen>
+
+    <!--  TextSize  -->
+    <dimen name="textSize_xxs">4sp</dimen>
+    <dimen name="textSize_xs">8sp</dimen>
+    <dimen name="textSize_s">12sp</dimen>
+    <dimen name="textSize_m">16sp</dimen>
+    <dimen name="textSize_l">20sp</dimen>
+    <dimen name="textSize_xl">24sp</dimen>
+    <dimen name="textSize_2xl">28sp</dimen>
+    <dimen name="textSize_3xl">32sp</dimen>
+
+    <!-- Offset -->
+    <dimen name="offset_xxs">4dp</dimen>
+    <dimen name="offset_xs">8dp</dimen>
+    <dimen name="offset_s">12dp</dimen>
+    <dimen name="offset_m">16dp</dimen>
+    <dimen name="offset_l">20dp</dimen>
+    <dimen name="offset_xl">24dp</dimen>
+    <dimen name="offset_2xl">28dp</dimen>
+    <dimen name="offset_3xl">32dp</dimen>
+    <dimen name="offset_4xl">40dp</dimen>
+    <dimen name="offset_5xl">44dp</dimen>
+</resources>

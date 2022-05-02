@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.Support.CoordinatorLayout" parent="android:Widget">
+        @null
+    </style>
+
+    <style name="TabItem" parent="Widget.Design.TabLayout">
+        <item name="android:textSize">@dimen/textSize_m</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+</resources>
